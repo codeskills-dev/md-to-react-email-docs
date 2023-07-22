@@ -1,0 +1,51 @@
+---
+title: "ParseMarkdownToReactEmailJSX"
+description: "Function that takes in a markdown string and produces parsed html for direct use in the browser and ui components"
+---
+
+## Usage
+
+<CodeGroup>
+```ts Basic
+import {parseMarkdownToReactEmailJSX} from "md-to-react-email"
+
+const markdown = `# Hello World`
+const parsedReactMail = parseMarkdownToReactEmailJSX({markdown})
+
+console.log(parsedReactMail)
+// `<h1 style="...valid inline CSS...">Hello, World!</h1>`
+
+````
+
+```ts With data attributes
+import {parseMarkdownToReactEmailJSX} from "md-to-react-email"
+
+const markdown = `# Hello World`
+
+const parsedReactMailWithDataAttributes =
+parseMarkdownToReactEmailJSX({markdown, withDataAttr: true})
+
+console.log(parsedReactMailWithDataAttributes)
+// `<h1 data-id="react-email-heading"
+// style="...valid inline CSS...">
+// Hello, World!
+// </h1>`
+
+````
+
+</CodeGroup>
+
+## Options
+
+<ResponseField name="markdown" type="string" required>
+  Markdown string that is going to be parsed
+</ResponseField>
+
+<ResponseField name="customStyles" type="StylesType" default="{}">
+  Specify the styles for the parsed markdown content according to the
+  corresponding HTML tag. See the [spec](/components/custom-types)
+</ResponseField>
+
+<ResponseField name="withDataAttr" type="boolean" default="false">
+  Specify the data-id attribute for each element in the parsed markdown
+</ResponseField>

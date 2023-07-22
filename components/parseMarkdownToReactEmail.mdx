@@ -1,0 +1,34 @@
+---
+title: "ParseMarkdownToReactEmail"
+description: "Function that takes in a markdown string and produces a parsed string of React-email components that can be copy and pasted into your codebase"
+---
+
+## Usage
+
+```ts ParseMarkdownToReactEmail
+import { parseMarkdownToReactEmail } from "md-to-react-email";
+
+const markdown = `# Hello World`;
+const parsedReactMail = parseMarkdownToReactEmail(markdown);
+
+console.log(parsedReactMail);
+// `<Heading as="h1" style={...styles go here...}></Heading>`
+```
+
+## Options
+
+<img src="/images/pmtre.png" />
+
+The `parseMarkdownToReactEmail` function takes in two arguements:
+
+- `markdown`
+- `customStyles`
+
+<ResponseField name="markdown" type="string" required>
+  Markdown string that is going to be parsed
+</ResponseField>
+
+<ResponseField name="customStyles" type="StylesType" default="{}">
+  Specify the styles for the parsed markdown content according to the
+  corresponding HTML tag. See the [spec](/components/custom-types)
+</ResponseField>

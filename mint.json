@@ -1,82 +1,54 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
-  "favicon": "/favicon.png",
+  "name": "md-to-react-email",
+  "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#9563FF",
-    "light": "#AE87FF",
-    "dark": "#0D001D",
+    "primary": "#EA0B0B",
+    "light": "#FF5C5C",
+    "dark": "#B91C1C",
     "background": {
-      "dark": "#090014"
+      "dark": "#1E1D1D"
     },
     "anchors": {
       "from": "#FF7F57",
       "to": "#9563FF"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "type": "github",
+    "url": "https://github.com/codeskills-dev/md-to-react-email"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Codeskills",
+      "icon": "browser",
+      "url": "https://codeskills.dev"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://blog.codeskills.dev"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "installation", "changelog"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Components",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "components/react-email-markdown",
+        "components/parseMarkdownToReactEmailJSX",
+        "components/parseMarkdownToReactEmail",
+        "components/utility-functions",
+        "components/custom-types"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/pauloe_me",
+    "github": "https://github.com/lordelogos",
+    "linkedin": "https://www.linkedin.com/in/pauloe-me/"
   }
 }

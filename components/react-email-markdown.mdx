@@ -1,0 +1,84 @@
+---
+title: "ReactEmailMarkdown"
+description: "A React component that converts markdown to valid react-email"
+---
+
+## Usage
+
+First import the component from `md-to-react-email`
+
+```tsx
+imoprt { ReactEmailMarkdown } from "md-to-react-email"
+```
+
+Then use in your [react-email](https://react.email) email template
+
+<CodeGroup>
+```tsx Basic
+export default function EmailTemplate() {
+  return (
+    <Email>
+      <Head />
+      <Section>
+        <ReactEmailMarkdown markdown={`# Hello, World!`} />
+      </Section>
+    </Email>
+  );
+}
+```
+```tsx With Custom styles
+export default function EmailTemplate() {
+  return (
+    <Email>
+      <Head />
+      <Section>
+        <ReactEmailMarkdown
+        markdown={`# Hello, World!`}
+        markdownCustomStyles={{
+          h1: { fontFamily: "cursive" },
+          p: { fontSize: "12px" },
+        }}
+      />
+      </Section>
+    </Email>
+  );
+}
+```
+```tsx With Container styles
+export default function EmailTemplate() {
+  return (
+    <Email>
+      <Head />
+      <Section>
+        <ReactEmailMarkdown
+            markdown={`# Hello, World!`}
+            markdownContainerStyles={{
+            background: "red",
+            border: "solid 2px yellow",
+            }}
+        />
+      </Section>
+    </Email>
+  );
+}
+```
+</CodeGroup>
+
+## Options
+
+<ResponseField name="markdown" type="string" required>
+  Markdown string that is going to be parsed
+</ResponseField>
+
+<ResponseField name="markdownCustomStyles" type="StylesType" default="{}">
+  Specify the styles for the parsed markdown content according to the
+  corresponding HTML tag. See the [spec](/components/custom-types)
+</ResponseField>
+
+<ResponseField name="markdownContainerStyles" type="React.CSSProperties">
+  Specify the styles for container `<div>` that contains the parsed markdown
+</ResponseField>
+
+<ResponseField name="showDataAttributes" type="boolean" default="true">
+  Specify the data-id attribute for each element in the parsed markdown
+</ResponseField>

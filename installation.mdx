@@ -1,0 +1,103 @@
+---
+title: "Installation"
+description: "Install from your command line"
+---
+
+#### With yarn
+
+```sh
+yarn add md-to-react-email
+```
+
+#### With npm
+
+```sh
+npm install md-to-react-email
+```
+
+## Usage
+
+<AccordionGroup>
+<Accordion icon="code" title="Directly as React-email component" defaultOpen="true">
+The `ReactEmailMarkdown` component can be imported directly into your react-email email template as a component.
+
+Example usage:
+
+```
+import {Section} from "@react-email/components"
+import {ReactEmailMarkdown} from "md-to-react-email"
+
+export default function EmailTemplate() {
+return (
+  <Email>
+    <Head />
+    <Section>
+      <ReactEmailMarkdown markdown={`# Hello, World!`} />
+    </Section>
+  </Email>
+)
+}
+```
+
+  </Accordion>
+  <Accordion icon="square-code" title="Directly into email template">
+  The `parseMarkdownToReactEmailJSX` function can parse markdown to valid HTML that can be pasted directly into your email template.
+
+Example usage:
+
+```
+import {parseMarkdownToReactEmailJSX} from "md-to-react-email"
+
+const markdown = `# Hello World`
+const parsedReactMail = parseMarkdownToReactEmailJSX({markdown})
+const parsedReactMailWithDataAttributes =
+  parseMarkdownToReactEmailJSX({markdown, withDataAttr: true})
+
+console.log(parsedReactMail)
+// `<h1 style="...valid inline CSS...">Hello, World!</h1>`
+
+console.log(parsedReactMailWithDataAttributes)
+// `<h1 data-id="react-email-heading"
+// style="...valid inline CSS...">
+// Hello, World!
+// </h1>`
+
+```
+
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="For code generation (copy and paste)">
+  The  `parseMarkdownToReactEmail` can be used to generate valid react-email code that can be copy and pasted into your react-email component code. The generated code uses react-email components and adds some default styles which are fully customizable
+
+Example usage:
+
+```
+import {parseMarkdownToReactEmail} from "md-to-react-email"
+
+const markdown = `# Hello World`
+const parsedReactMail = parseMarkdownToReactEmail(markdown)
+
+console.log(parsedReactMail)
+// <Heading as="h1" style={...styles go here...}></Heading>
+
+```
+
+  </Accordion>
+</AccordionGroup>
+
+## Components
+
+`md-to-react-email` contains pre-defined react-email and html components for the email template structure and styling. You can modify these components to customize the look and feel of your email template.
+
+The following components are available for customization:
+
+- Headers: `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`
+- BlockQuotes
+- Text: paragraphs, bold and italic text
+- Links: `<a>`
+- Code: Code blocks and inline code
+- Lists: `<ul>`, `<li>`
+- Image: `<img>`
+- Line-breaks: `<br>`
+- Horizontal-rule: `<hr>`
+- Table: `<table>`, `<thead>`, `<tbody>`, `<th>`, `<td>`, `<tr>`
+- Strikethrough

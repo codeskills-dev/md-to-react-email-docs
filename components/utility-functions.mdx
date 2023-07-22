@@ -1,0 +1,36 @@
+---
+title: "Utility functions "
+description: "A collection of useful funcitons that can be used from the package"
+---
+
+## camelToKebabCase
+
+This function converts strings from camelcase to kebab case
+
+### Usage
+
+```ts camelToKebabCase
+const camelCase = "thisIsCamelCase";
+const kebabCase = camelToKebabCase(camelCase);
+
+console.log(kebabCase);
+// this-is-kebab-case
+```
+
+## parseCssInJsToInlineCss
+
+This function converts css styles from css-in-js to inline css
+
+### Usage
+
+```ts parseCssInJsToInlineCss
+const cssInJs = {
+  backgroundColor: "red",
+  fontSize: "12px",
+  paddingTop: "20px",
+};
+const inlineCss = parseCssInJsToInlineCss(cssInJs);
+
+console.log(inlineCss);
+// "background-color:red;font-size:12px;padding-top:20px"
+```
