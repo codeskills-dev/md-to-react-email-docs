@@ -50,5 +50,10 @@
     "twitter": "https://twitter.com/pauloe_me",
     "github": "https://github.com/lordelogos",
     "linkedin": "https://www.linkedin.com/in/pauloe-me/"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-BXG1VEPRPB"
+    }
   }
 }
