@@ -40,7 +40,6 @@
       "pages": [
         "components/react-email-markdown",
         "components/parseMarkdownToReactEmailJSX",
-        "components/parseMarkdownToReactEmail",
         "components/utility-functions",
         "components/custom-types"
       ]
