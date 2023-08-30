@@ -1,0 +1,28 @@
+{
+  "name": "md-to-react-email/docs",
+  "version": "1.0.0",
+  "description": "This repo contains documentation for [md-to-react-email](https://github.com/codeskills-dev/md-to-react-email)",
+  "scripts": {
+    "install": "mintlify install",
+    "dev": "mintlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeskills-dev/docs.git"
+  },
+  "keywords": [
+    "md-to-react-email",
+    "React email",
+    "markdown",
+    "React"
+  ],
+  "author": {
+    "name": "Paul Ehikhuemen",
+    "url": "https://github.com/lordelogos"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeskills-dev/docs/issues"
+  },
+  "homepage": "https://md2re.codeskills.dev"
+}
